@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETF 觀測站 - Brian</title>
+    <style>
+        body { font-family: "Helvetica Neue", Arial, sans-serif; background-color: #f4f4f9; padding: 20px; text-align: center; }
+        .container { max-width: 1000px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .back-btn { display: inline-block; padding: 10px 20px; background: #95a5a6; color: white; text-decoration: none; border-radius: 5px; margin-bottom: 20px; }
+        .back-btn:hover { background: #7f8c8d; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="invest.html" class="back-btn">⬅ 返回儀表板</a>
+        <h1>📈 台股與全球 ETF 觀測站</h1>
+        <p>追蹤 009816 等核心台股標的，以及 SCHG 等國際資產配置。</p>
+        
+        <div class="tradingview-widget-container" style="margin-top: 30px;">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+            {
+            "colorTheme": "light",
+            "dateRange": "12M",
+            "showChart": true,
+            "locale": "zh_TW",
+            "largeChartUrl": "",
+            "isTransparent": false,
+            "showSymbolLogo": true,
+            "showFloatingTooltip": false,
+            "width": "100%",
+            "height": "500",
+            "tabs": [
+                {
+                "title": "全球指數與 ETF",
+                "symbols": [
+                    { "s": "AMEX:SPY", "d": "S&P 500" },
+                    { "s": "AMEX:SCHG", "d": "嘉信美國大型成長股" },
+                    { "s": "NASDAQ:QQQ", "d": "納斯達克 100" },
+                    { "s": "TWSE:0050", "d": "元大台灣50" }
+                ]
+                }
+            ]
+            }
+            </script>
+        </div>
+        </div>
+</body>
+</html>
